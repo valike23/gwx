@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
 })
 
 app.post('/sum', function (req, res) {
-    console.log(req.body);
+    console.log('the request is: ', req.body);
     const { numb } = req.body;
     let total = 0;
     db.insert({ numb }, function (err: any, newDocs: any[]) {
